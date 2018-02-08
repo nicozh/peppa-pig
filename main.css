@@ -1,0 +1,242 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+*::before{box-sizing:border-box}
+*::after{box-sizing:border-box}
+
+/* 容器 */
+body{
+    background:rgb(144, 124, 236)
+}
+.pig{
+  height:100vh;
+  border:1px solid pink;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+/* 头 */
+.head{
+  border:5px solid #E795C0;
+  height:170px;
+  width:170px;
+  position:relative;
+  border-radius:55% 45% 45% 55%/60% 55% 45% 40%;
+  background:#FFC4E0;
+  z-index:1
+}
+.nose{
+  width:140px;
+  height:95px;
+  border:5px solid #E795C0;
+  border-right-color:#FFC4E0;
+  border-radius:70% 20% 40% 60%/50% 0% 20% 45%;
+  position:absolute;
+  top:-27px;
+  left:-48px;
+  transform:rotate(20deg);
+   background:#FFC4E0
+}
+.nose::after{
+  content:'';
+  display:block;
+  position:absolute;
+  width:63px;
+  height:20px;
+  background:#FFC4E0;
+  left:64px;
+  top:75px;
+  /* border:1px solid red; */
+}
+.snout{
+  width:50px;
+  height:66px;
+  border:5px solid #E795C0;
+  border-radius: 50% / 50% ;
+  position:absolute;
+  left:-46px;
+  top:-27px;
+  background:#FFC4E0;
+  transform:rotate(20deg);
+}
+.snout::before{
+  content:'';
+  display:block;
+  width:8px;
+  height:8px;
+  /* border:1px solid red; */
+  border-radius:50%;
+  background:#E795C0;
+  position:absolute;
+  top:28px;
+  left:25px;
+}
+.snout::after{
+  content:'';
+  display:block;
+  width:8px;
+  height:8px;
+  /* border:1px solid red; */
+  border-radius:50%;
+  background:#E795C0;
+  top:22px;
+  left:5px;
+  position:absolute;
+}
+.mouth{
+  width:100px;
+  height:210px;
+  border:5px solid transparent;
+  border-bottom-color:#EF3F85;
+  border-radius:0 0 50% 50%/60% 60% 40% 40%;
+  position:absolute;
+  top:-90px;
+  left:25px;
+  transform:rotate(20deg);
+}
+
+/* 眼睛 */
+.eye{
+  position:absolute;
+  width:30px;
+  height:30px;
+  background:white;
+  border:5px solid #E795C0;
+  border-radius:55% 45% 55% 45%/50% 50% 50% 50%;
+}
+.eye.left{
+  left:80px;
+  top:15px;
+}
+.eye.right{
+  left:40px;
+  top:px;
+}
+.eye::after{
+  content:'';
+  display:block;
+  position:absolute;
+  background:black;
+  width:10px;
+  height:10px;
+  border-radius:50%; 
+  left:3px;
+  top:4px;
+}
+/* 脸颊 */
+.cheek{
+  width:50px;
+  height:50px;
+  position:absolute;
+  background:#F5AACB;
+  border-radius:50%;
+  top:70px;
+  right:20px;
+}
+/* 耳朵 */
+.ear{
+  position:absolute;
+  height:44px;
+  width:30px;
+  border:5px solid #E795C0;
+  background:#FFC4E0;
+  border-radius:50% 50% 20% 20%/40% 40% 60% 60%;
+}
+.ear.left{
+  top:-51px;
+  left:60px;
+  transform:rotate(21deg);
+}
+.ear.right{
+  top:-37px;
+  left:105px;
+  transform:rotate(20deg)
+}
+.body{
+  position:relative;
+}
+.skirt{
+  width:170px;
+  height:130px;
+  border:5px solid #EE5253;
+  border-radius:35% 30% 0 0/100% 100% 0 0;
+  margin-top:-40px;
+  background:#F8756D;
+}
+
+/* 手臂 */
+.arm{
+  position:absolute;
+  width:7px;
+  height:70px;
+  /* border:1px solid red; */
+  background:#FFC4E0;
+  top:-10px;
+  border-radius:3px;
+}
+.arm.right{
+  right:-18px;
+  transform:rotate(-56deg)
+}
+.arm.left{
+  left:-17px;
+  transform:rotate(56deg)
+}
+/* 手指 */
+.arm::before,.arm::after{
+  content:'';
+  display:block;
+  position:absolute;
+  background:#FFC4E0;
+  width:22px;
+  height:7px;
+  /* border:1px solid red; */
+  border-radius:2px
+}
+.arm.left::before,.arm.right::before{
+  left:-15px;
+  top:50px;
+  transform:rotate(-50deg);
+}
+.arm.left::after,.arm.right::after{
+  left:px;
+  top:49px;
+  transform:rotate(53deg);
+}
+.foot{
+  position:absolute;
+  width:8px;
+  height:39px;
+  background:#FFC4E0;
+  /* border:1px solid red */
+}
+.foot::before{
+  content:'';
+  display:block;
+  position:absolute;
+  border:1px solid black;
+  background:#333333;
+  width:45px;
+  height:12px;
+  border-radius:20% 80% 80% 20%/50% 50% 30% 50%
+}
+.foot.left{
+  left:40px;
+}
+.foot.right{
+  right:40px
+}
+.foot.left::before,.foot.right::before{
+  top:30px;
+  right:-2px;
+}
+.shadow{
+  width:165px;
+  height:30px;
+  position:absolute;
+  border-radius: 50%;
+  background:#777;
+  top:110px;
+  left:-10px;
+  opacity: 0.9;
+  z-index:-1
+}
